@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Imargon Costuras — Versiones de la landing</title>
+<style>
+  :root {
+    --bg: #FBF3EC;
+    --bg-card: #FFFDF9;
+    --ink: #2A1D19;
+    --muted: #8A7A72;
+    --accent: #A94E3E;
+    --accent-2: #6B2C39;
+    --line: rgba(107, 44, 57, 0.18);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 64px 28px 80px; }
+  .eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    margin: 0 0 10px;
+  }
+  h1 {
+    font-size: clamp(26px, 4.5vw, 34px);
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+  p.dek { color: var(--muted); font-size: 16px; margin: 0 0 44px; max-width: 50ch; }
+
+  .card {
+    display: block;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 24px 26px;
+    margin-bottom: 18px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .card:hover { border-color: var(--accent); }
+  .card .tag {
+    display: inline-block;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(169, 78, 62, 0.1);
+    padding: 3px 9px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  .card h2 { font-size: 19px; margin: 0 0 6px; }
+  .card p { font-size: 14.5px; color: var(--muted); margin: 0; line-height: 1.5; }
+
+  footer {
+    margin-top: 40px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow">Imargon Costuras</p>
+    <h1>Tres versiones de la landing</h1>
+    <p class="dek">Mismo contenido e identidad en las tres — lo que cambia es el tratamiento visual del inicio. Tocá cualquiera para verla completa.</p>
+
+    <a class="card" href="v1.html">
+      <span class="tag">Versión 1</span>
+      <h2>Sin encaje</h2>
+      <p>Hero centrado, fondo liso en toda la página. La base de la identidad, sin el detalle de mantilla.</p>
+    </a>
+
+    <a class="card" href="v2.html">
+      <span class="tag">Versión 2</span>
+      <h2>Con encaje real</h2>
+      <p>El encaje de la mantilla como divisor entre secciones, hero centrado igual que la v1.</p>
+    </a>
+
+    <a class="card" href="v3.html">
+      <span class="tag">Versión 3</span>
+      <h2>Hero animado</h2>
+      <p>Logo y texto a la izquierda, y a la derecha una aguja bordando un hilo en bucle animado. Incluye el encaje de la v2 en el resto de la página.</p>
+    </a>
+
+    <footer>Imargon Costuras — por Valvirtual</footer>
+  </div>
+</body>
+</html>
