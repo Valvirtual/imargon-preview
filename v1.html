@@ -248,37 +248,31 @@
     stroke-width: 3.5;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke-dasharray: 650;
-    stroke-dashoffset: 650;
-    animation: stitch-draw 6s ease-in-out infinite;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: stitch-draw 3.2s ease-out 1 forwards;
   }
   .stitch-needle {
-    offset-path: path("M180,260 C120,210 70,175 70,125 C70,90 100,65 135,65 C160,65 175,80 180,100 C185,80 200,65 225,65 C260,65 290,90 290,125 C290,175 240,210 180,260 Z");
+    offset-path: path("M90,290 L105,250 L120,290 L135,250 L150,290 L165,250 L180,290 L195,250 L210,290 L225,250 L240,290 L255,250 L270,290 C300,270 320,240 320,210 C320,160 260,140 180,140 C100,140 40,160 40,210 C40,240 60,270 90,290 Z");
     offset-rotate: auto;
-    animation: stitch-move 6s ease-in-out infinite;
+    animation: stitch-move 3.2s ease-out 1 forwards;
   }
   .needle-body { fill: var(--ink); }
   .needle-eye { fill: none; stroke: var(--ink); stroke-width: 1.6; }
 
   @keyframes stitch-draw {
-    0% { stroke-dashoffset: 650; opacity: 1; }
-    60% { stroke-dashoffset: 0; opacity: 1; }
-    78% { stroke-dashoffset: 0; opacity: 1; }
-    88% { opacity: 0; }
-    89% { stroke-dashoffset: 650; opacity: 0; }
-    100% { stroke-dashoffset: 650; opacity: 1; }
+    0% { stroke-dashoffset: 1000; }
+    75% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: 0; }
   }
   @keyframes stitch-move {
     0% { offset-distance: 0%; opacity: 1; }
-    60% { offset-distance: 100%; opacity: 1; }
-    78% { offset-distance: 100%; opacity: 1; }
-    88% { opacity: 0; }
-    89% { offset-distance: 0%; opacity: 0; }
-    100% { offset-distance: 0%; opacity: 1; }
+    75% { offset-distance: 100%; opacity: 1; }
+    100% { offset-distance: 100%; opacity: 0; }
   }
   @media (prefers-reduced-motion: reduce) {
     .stitch-thread { animation: none; stroke-dashoffset: 0; }
-    .stitch-needle { animation: none; offset-distance: 100%; }
+    .stitch-needle { animation: none; offset-distance: 100%; opacity: 0; }
   }
   @media (max-width: 720px) {
     .hero-split { grid-template-columns: 1fr; text-align: center; }
@@ -300,8 +294,8 @@
       <a class="btn-whatsapp" href="https://wa.me/34654584205" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
     </div>
     <div class="hero-right">
-      <svg class="stitch-svg" viewBox="0 0 360 360" role="img" aria-label="Ilustración animada de una aguja bordando un corazón">
-        <path class="stitch-thread" d="M180,260 C120,210 70,175 70,125 C70,90 100,65 135,65 C160,65 175,80 180,100 C185,80 200,65 225,65 C260,65 290,90 290,125 C290,175 240,210 180,260 Z" />
+      <svg class="stitch-svg" viewBox="0 0 360 360" role="img" aria-label="Ilustración de una aguja bordando una peineta de fallera">
+        <path class="stitch-thread" pathLength="1000" d="M90,290 L105,250 L120,290 L135,250 L150,290 L165,250 L180,290 L195,250 L210,290 L225,250 L240,290 L255,250 L270,290 C300,270 320,240 320,210 C320,160 260,140 180,140 C100,140 40,160 40,210 C40,240 60,270 90,290 Z" />
         <g class="stitch-needle">
           <path class="needle-body" d="M-2,-24 C-3,-25 -3,-23 -2.5,-20 L-1,20 C-0.8,23 0.8,23 1,20 L2.5,-20 C3,-23 3,-25 2,-24 C1,-25.5 -1,-25.5 -2,-24 Z"/>
           <ellipse class="needle-eye" cx="0" cy="-27" rx="3" ry="4.5"/>
